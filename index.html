@@ -1,0 +1,22 @@
+<html lang="en">
+    <head>
+        <title>Grammar2JSON</title>
+        <script type="text/javascript" src="parser.js"></script>
+    </head>
+    <body>
+        <h1>Grammar to Json converter</h1>
+        <b>Enter the grammar as following:</b> <br>
+        head -> body | ... | body <br>
+        head -> body | ... | body <br>
+        ... <br><br>
+        <i>Note:</i>
+        <ul>
+            <li>Use '' to denote epsilon</li>
+            <li>Variables/Terminals in a body should be separated by spaces</li>
+            <li>Productions should be separated by new lines</li>
+        </ul>
+        <textarea rows="20" cols="30" id="input" placeholder="S -> S A | '' &#10;A -> a"></textarea>
+        <button onclick="parse(document.getElementById('input').value)">Parse</button>
+        <textarea rows="20" cols="30" id="output" placeholder="JSON output"></textarea>
+    </body>
+</html>

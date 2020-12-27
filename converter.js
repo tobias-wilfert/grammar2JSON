@@ -1,4 +1,4 @@
-function parse(str) {
+function converter(str) {
     // The Object to return
     let obj = {
       Variables: [],

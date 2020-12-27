@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <title>Grammar2JSON</title>
-        <script type="text/javascript" src="parser.js"></script>
+        <script type="text/javascript" src="converter.js"></script>
     </head>
     <body>
         <h1>Grammar to Json converter</h1>
@@ -14,9 +14,13 @@
             <li>Use '' to denote epsilon</li>
             <li>Variables/Terminals in a body should be separated by spaces</li>
             <li>Productions should be separated by new lines</li>
+            <li>
+                <i>For Safari users in the below place holder A -> a should be on a newline.</i>
+                <a href="https://stackoverflow.com/q/7312623/8076979">(Thread on StackOverflow discussing the problem)</a>
+            </li>
         </ul>
         <textarea rows="20" cols="30" id="input" placeholder="S -> S A | '' &#10;A -> a"></textarea>
-        <button onclick="parse(document.getElementById('input').value)">Parse</button>
+        <button onclick="converter(document.getElementById('input').value)">Parse</button>
         <textarea rows="20" cols="30" id="output" placeholder="JSON output"></textarea>
     </body>
 </html>

@@ -7,3 +7,5 @@ thought by Els Laenens.
 
 This program is intended to facilitate the generation of test files for the course. It is hosted using Github pages and can be found here:
 https://tobias-wilfert.github.io/grammar2JSON/
+
+*Disclaimer: It currently has no CSS, so it is not necessarily pretty.*

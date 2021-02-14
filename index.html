@@ -1,26 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Grammar2JSON</title>
         <script type="text/javascript" src="converter.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Grammar to Json converter</h1>
-        <b>Enter the grammar as following:</b> <br>
-        head -> body | ... | body <br>
-        head -> body | ... | body <br>
-        ... <br><br>
-        <i>Note:</i>
-        <ul>
-            <li>Use '' to denote epsilon</li>
-            <li>Variables/Terminals in a body should be separated by spaces</li>
-            <li>Productions should be separated by new lines</li>
-            <li>
-                <i>For Safari users in the below place holder A -> a should be on a newline.</i>
-                <a href="https://stackoverflow.com/q/7312623/8076979">(Thread on StackOverflow discussing the problem)</a>
-            </li>
-        </ul>
-        <textarea rows="20" cols="30" id="input" placeholder="S -> S A | '' &#10;A -> a"></textarea>
-        <button onclick="converter(document.getElementById('input').value)">Generate</button>
-        <textarea rows="20" cols="30" id="output" placeholder="JSON output"></textarea>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-primary">Grammar to Json converter</h1>
+                    <b>Enter the grammar as following:</b> <br>
+                    <div class="">
+                    head -> body | ... | body <br>
+                    head -> body | ... | body <br>
+                    ... <br><br>
+                    </div>
+                    <i>Note:</i>
+                    <ul>
+                        <li>Use '' to denote epsilon</li>
+                        <li>Variables/Terminals in a body should be separated by spaces</li>
+                        <li>Productions should be separated by new lines</li>
+                        <li>
+                            <i>For Safari users in the below place holder A -> a should be on a newline.</i>
+                            <a href="https://stackoverflow.com/q/7312623/8076979">(Thread on StackOverflow discussing the problem)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary btn-block" onclick="converter(document.getElementById('input').value)">Generate</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mt-3">
+                    <textarea class="form-control" rows="20"  cols="30" id="input" placeholder="S -> S A | '' &#10;A -> a"></textarea>
+                </div>
+                <div class="col-lg-6 col-md-12 mt-3">
+                    <textarea class="form-control" rows="20"  cols="30" id="output" placeholder="JSON output"></textarea>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
+
